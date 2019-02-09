@@ -1,0 +1,10 @@
+spring:
+  main:
+    web-application-type: none
+
+#server:
+#  port: 8083
+
+grpc:
+  port: 8082
+#  enable-reflection: true

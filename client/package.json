@@ -1,0 +1,22 @@
+{
+  "name": "grpc-started",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "protoc -I=../../proto helloworld.proto --js_out=import_style=commonjs:./src/proto --grpc-web_out=import_style=typescript,mode=grpcweb:./src/proto && parcel -p 8081 src/index.pug",
+    "docker-run": "docker build -t grpc-nginx ./docker && docker run --rm -p 8080:80 --name grpc-nginx1 grpc-nginx"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.11.0",
+    "pug": "^2.0.3",
+    "typescript": "^3.3.3"
+  },
+  "dependencies": {
+    "google-protobuf": "^3.7.0-rc.2",
+    "grpc-web": "^1.0.3"
+  }
+}
